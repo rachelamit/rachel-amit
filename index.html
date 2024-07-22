@@ -1,0 +1,260 @@
+<!DOCTYPE html><html><head><base href="https://websim.space/"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>טופס הכנה לתהליך ליווי זוגי</title><style>
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
+    body {
+        font-family: 'Heebo', Arial, sans-serif;
+        background-color: #FFFAF0;
+        color: #000080;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        direction: rtl;
+    }
+    .container {
+        width: 95%;
+        max-width: 600px;
+        margin: auto;
+        overflow: hidden;
+        padding: 10px;
+    }
+    header {
+        background: #DAA520;
+        color: #000080;
+        padding: 15px 0;
+        text-align: center;
+        animation: float 3s ease-in-out infinite;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 1.8em;
+    }
+    .form-container {
+        background: #F0E68C;
+        border-radius: 10px;
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        animation: fadeIn 1s ease-out;
+    }
+    .form-group {
+        margin-bottom: 15px;
+        animation: fadeIn 1s ease-out;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #000080;
+        font-weight: bold;
+    }
+    input[type="text"], input[type="number"], textarea, select {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #DAA520;
+        border-radius: 5px;
+        background-color: #FFF;
+        color: #000080;
+        transition: all 0.3s ease;
+        font-size: 16px;
+    }
+    input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:focus {
+        outline: none;
+        border-color: #000080;
+        box-shadow: 0 0 5px rgba(0,0,128,0.5);
+    }
+    button {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background: #000080;
+        color: #FFF;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1em;
+        transition: all 0.3s ease;
+    }
+    button:hover {
+        background: #00005A;
+        transform: scale(1.05);
+    }
+    .whatsapp-link {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        padding: 12px;
+        background: #25D366;
+        color: #FFF;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+    .whatsapp-link:hover {
+        background: #128C7E;
+        transform: scale(1.05);
+    }
+    .checkbox-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .checkbox-item {
+        display: flex;
+        align-items: center;
+        background: #FFF;
+        padding: 8px 12px;
+        border-radius: 20px;
+        border: 2px solid #DAA520;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 14px;
+    }
+    .checkbox-item:hover {
+        background: #DAA520;
+        color: #FFF;
+    }
+    .checkbox-item input[type="checkbox"] {
+        margin-left: 5px;
+    }
+    .range-slider {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .range-labels {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+        font-size: 14px;
+    }
+    .counselor-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 20px auto;
+        display: block;
+        border: 3px solid #DAA520;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    @media (max-width: 480px) {
+        .checkbox-item {
+            font-size: 12px;
+            padding: 6px 10px;
+        }
+        header h1 {
+            font-size: 1.5em;
+        }
+        .form-container {
+            padding: 15px;
+        }
+        .counselor-image {
+            width: 120px;
+            height: 120px;
+        }
+    }
+</style></head><body>
+    <header>
+        <h1>טופס הכנה לתהליך ליווי זוגי</h1>
+    </header>
+    <div class="container">
+        <img src="https://scontent.ftlv16-1.fna.fbcdn.net/v/t39.30808-6/422628818_10230685364774498_84405731543496996_n.jpg?_nc_cat=109&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=F8Nvpz5xAEEQ7kNvgEXMEFK&amp;_nc_ht=scontent.ftlv16-1.fna&amp;oh=00_AYCw5RBjlCELu6eIBmOvOwa5uiXmhjfeZAh66onVHx0j0A&amp;oe=66A3DF31" alt="תמונת היועצת הזוגית" class="counselor-image">
+        <div class="form-container">
+            <form id="coupleForm" method="GET" action="https://websim.space/submit">
+                <div class="form-group">
+                    <label for="status">מצב משפחתי:</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item"><input type="checkbox" name="status" value="נשואים"> נשואים</label>
+                        <label class="checkbox-item"><input type="checkbox" name="status" value="חיים יחד"> חיים יחד</label>
+                        <label class="checkbox-item"><input type="checkbox" name="status" value="בזוגיות"> בזוגיות</label>
+                        <label class="checkbox-item"><input type="checkbox" name="status" value="אחר"> אחר</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="duration">משך הקשר:</label>
+                    <input type="range" id="duration" name="duration" min="0" max="50" value="0" class="range-slider">
+                    <div class="range-labels">
+                        <span>0 שנים</span>
+                        <span>25 שנים</span>
+                        <span>50+ שנים</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="children">האם יש לכם ילדים? כמה?</label>
+                    <input type="number" id="children" name="children" min="0" required="">
+                </div>
+                <div class="form-group">
+                    <label>סיבות עיקריות לפנייה לייעוץ זוגי:</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item"><input type="checkbox" name="reason" value="תקשורת"> תקשורת</label>
+                        <label class="checkbox-item"><input type="checkbox" name="reason" value="אינטימיות"> אינטימיות</label>
+                        <label class="checkbox-item"><input type="checkbox" name="reason" value="כספים"> כספים</label>
+                        <label class="checkbox-item"><input type="checkbox" name="reason" value="ילדים"> ילדים</label>
+                        <label class="checkbox-item"><input type="checkbox" name="reason" value="בגידה"> בגידה</label>
+                        <label class="checkbox-item"><input type="checkbox" name="reason" value="אחר"> אחר</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="attempts">האם ניסיתם בעבר לפתור את הבעיה? אם כן, כיצד?</label>
+                    <textarea id="attempts" name="attempts" rows="4" required=""></textarea>
+                </div>
+                <div class="form-group">
+                    <label>חוזקות של הקשר שלכם:</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item"><input type="checkbox" name="strengths" value="אהבה"> אהבה</label>
+                        <label class="checkbox-item"><input type="checkbox" name="strengths" value="כבוד הדדי"> כבוד הדדי</label>
+                        <label class="checkbox-item"><input type="checkbox" name="strengths" value="תמיכה"> תמיכה</label>
+                        <label class="checkbox-item"><input type="checkbox" name="strengths" value="הומור"> הומור</label>
+                        <label class="checkbox-item"><input type="checkbox" name="strengths" value="משפחתיות"> משפחתיות</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="goals">מהן המטרות שלכם מתהליך הליווי הזוגי?</label>
+                    <textarea id="goals" name="goals" rows="4" required=""></textarea>
+                </div>
+                <div class="form-group">
+                    <label>ציפיות מהיועצת הזוגית:</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item"><input type="checkbox" name="expectations" value="הקשבה"> הקשבה</label>
+                        <label class="checkbox-item"><input type="checkbox" name="expectations" value="כלים פרקטיים"> כלים פרקטיים</label>
+                        <label class="checkbox-item"><input type="checkbox" name="expectations" value="אובייקטיביות"> אובייקטיביות</label>
+                        <label class="checkbox-item"><input type="checkbox" name="expectations" value="תמיכה רגשית"> תמיכה רגשית</label>
+                    </div>
+                </div>
+                <button type="submit">שליחת הטופס</button>
+            </form>
+        </div>
+        <a href="https://wa.me/972546883455?text=שלום, מילאתי את טופס ההכנה לליווי הזוגי ואשמח לקבוע פגישה." class="whatsapp-link">
+            שלחו לנו הודעה בוואטסאפ
+        </a>
+    </div>
+
+    <script>
+        document.getElementById('coupleForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            var formData = new FormData(this);
+            var message = "שלום, מילאתי את טופס ההכנה לליווי הזוגי:\n\n";
+            
+            formData.forEach((value, key) => {
+                if (value) {
+                    message += key + ": " + value + "\n";
+                }
+            });
+            
+            var whatsappUrl = "https://wa.me/972546883455?text=" + encodeURIComponent(message);
+            window.location.href = whatsappUrl;
+        });
+
+        document.getElementById('duration').addEventListener('input', function(e) {
+            var years = e.target.value;
+            e.target.nextElementSibling.children[1].textContent = years + " שנים";
+        });
+    </script>
+</body></html>
